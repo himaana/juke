@@ -64,29 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class _LineSpacing extends StatelessWidget {
-  const _LineSpacing({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(
-        left: 20,
-      ),
-      decoration: const BoxDecoration(
-        border: Border(
-          top: BorderSide(
-            color: Colors.grey,
-            width: 0.5,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class _RecentlyPlayed extends StatelessWidget {
   const _RecentlyPlayed({
     super.key,
@@ -119,7 +96,7 @@ class _RecentlyPlayed extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10.0),
-          const _LineSpacing(),
+          const LineSpacing(),
         ],
       ),
     );
@@ -160,7 +137,7 @@ class _NewAddedSong extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10.0),
-          const _LineSpacing(),
+          const LineSpacing(),
         ],
       ),
     );

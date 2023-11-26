@@ -99,14 +99,15 @@ class _RecentlyPlayed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
+        vertical: 10.0,
       ),
       child: Column(
         children: [
-          SectionHeader(title: 'Recently Played'),
-          const SizedBox(
-            height: 20.0,
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: SectionHeader(title: 'Recently Played'),
           ),
+          const SizedBox(height: 20.0),
           SizedBox(
             height: 140.0,
             child: ListView.builder(
@@ -117,6 +118,7 @@ class _RecentlyPlayed extends StatelessWidget {
               },
             ),
           ),
+          const SizedBox(height: 10.0),
           const _LineSpacing(),
         ],
       ),
@@ -136,11 +138,14 @@ class _NewAddedSong extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
+        vertical: 10.0,
       ),
       child: Column(
         children: [
-          SectionHeader(title: 'New Added Song'),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: SectionHeader(title: 'New Added Song'),
+          ),
           const SizedBox(
             height: 20.0,
           ),
@@ -154,6 +159,7 @@ class _NewAddedSong extends StatelessWidget {
               },
             ),
           ),
+          const SizedBox(height: 10.0),
           const _LineSpacing(),
         ],
       ),

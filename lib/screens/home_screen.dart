@@ -103,7 +103,7 @@ class _RecentlyPlayed extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Padding(
+          const Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: SectionHeader(title: 'Recently Played'),
           ),
@@ -142,8 +142,8 @@ class _NewAddedSong extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
             child: SectionHeader(title: 'New Added Song'),
           ),
           const SizedBox(
@@ -180,48 +180,53 @@ class _BannerBox extends StatelessWidget {
         right: 10,
         left: 10,
       ),
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.90,
-        height: MediaQuery.of(context).size.height * 0.75,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.amber.shade500.withOpacity(1),
-              Colors.transparent,
-            ],
+      child: Stack(alignment: Alignment.center, children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.90,
+          height: MediaQuery.of(context).size.height * 0.60,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.amber.shade500.withOpacity(1),
+                  Colors.transparent,
+                ],
+                stops: [
+                  0.0,
+                  0.8
+                ]),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15.0),
+            ),
           ),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-        ),
-        child: Container(
-          margin: const EdgeInsets.only(
-            top: 65,
-            left: 50,
-            right: 50,
-          ),
-          child: Column(
-            children: [
-              const Text(
-                '1 Million Songs To Play. All ad-free',
-                style: TextStyle(
-                  fontSize: 24.0,
+          child: Container(
+            margin: const EdgeInsets.only(
+              top: 65,
+              left: 50,
+              right: 50,
+            ),
+            child: Column(
+              children: [
+                const Text(
+                  '1 Million Songs To Play. All ad-free',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Image.asset(
-                'assets/images/juke_banner.png',
-                width: MediaQuery.of(context).size.width * 0.40,
-              )
-            ],
+                const SizedBox(
+                  height: 16,
+                ),
+                Image.asset(
+                  'assets/images/juke_banner.png',
+                  width: MediaQuery.of(context).size.width * 0.40,
+                )
+              ],
+            ),
           ),
         ),
-      ),
+      ]),
     );
   }
 }

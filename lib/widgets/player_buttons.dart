@@ -68,10 +68,13 @@ class PlayerButtons extends StatelessWidget {
                     color: Colors.white,
                   ),
                   iconSize: 75.0,
-                  onPressed: () => audioPlayer.seek(
-                    Duration.zero,
-                    index: audioPlayer.effectiveIndices!.first,
-                  ),
+                  onPressed: () {
+                    audioPlayer.stop(); // Manually reset the audio player
+                    audioPlayer.seek(
+                      Duration.zero,
+                      index: audioPlayer.effectiveIndices!.first,
+                    );
+                  },
                 );
               }
             } else {

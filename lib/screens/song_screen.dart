@@ -62,15 +62,15 @@ class _SongScreenState extends State<SongScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(
-            'PLAYING FROM RADIO',
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.white,
-            ),
-          ),
-          centerTitle: true,
-          actions: [],
+          // title: Text(
+          //   'PLAYING FROM RADIO',
+          //   style: TextStyle(
+          //     fontSize: 14,
+          //     color: Colors.white,
+          //   ),
+          // ),
+          // centerTitle: true,
+          // actions: [],
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(

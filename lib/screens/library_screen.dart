@@ -27,7 +27,7 @@ class LibraryScreen extends StatelessWidget {
                     title: 'Playlists', icon: Icons.queue_music_rounded),
                 const ItemRow(title: 'history', icon: Icons.history_rounded),
                 Padding(
-                  padding: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Column(
                     children: [
                       SectionHeader(title: 'Recently Added Playlist'),
@@ -151,49 +151,7 @@ class ItemRow extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          Container(
-            margin: const EdgeInsets.only(
-              left: 35,
-            ),
-            decoration: BoxDecoration(
-              border: Border(
-                top: BorderSide(
-                  color: Colors.grey,
-                  width: 0.5,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _LineSpacing extends StatelessWidget {
-  const _LineSpacing({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(
-        left: 35,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(
-                  color: Colors.grey,
-                  width: 0.5,
-                ),
-              ),
-            ),
-          )
+          LineSpacing(),
         ],
       ),
     );
